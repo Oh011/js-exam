@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+
+
+
+    <link rel="icon" type="image/x-icon" href="imgs/logo.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+
+
+
+
+
+    <nav>
+
+
+        <div class="side d-flex ">
+
+
+            <div class="side-nav  ">
+
+                <div class="inside d-flex flex-column justify-content-between h-100">
+
+                    <ul class="list-unstyled text-white overflow-hidden">
+    
+                        <li class="py-2 position-relative"  id="search">Search</li>
+                        <li class="py-2 position-relative"   id="category">Categories</li>
+                        <li class="py-2 position-relative"  id="area">Area</li>
+                        <li class="py-2 position-relative"  id="Ingredients">Ingredients</li>
+                        <li class="py-2 position-relative"  id="contact-us">Contact Us</li>
+                    </ul>
+    
+    
+                    <div class="side-nav-footer text-white">
+    
+                       
+                            <div class="icons">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div class="footer">
+                                <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                        
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="right d-flex flex-column justify-content-between align-items-center">
+                <div class="top">
+                    <img src="imgs/logo.png" class="lg" alt="logoimage">
+                </div>
+                
+                
+                <div class="middle " id="middle">
+                    
+                    <i class="fa fa-align-justify fa-2x" aria-hidden="true" id="open"></i>
+                    <!-- <i class="fa fa-bars fa-2x" id="open"></i> -->
+                   
+                </div>
+    
+    
+                <div class="bottom">
+                    <i class="fa-solid fa-globe d-block"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="loading">
+
+
+        <span class="loader"></span>
+    </div>
+
+
+
+    <div class="container w-75 d-none" id="searchContainer">
+        <div class="row py-4 ">
+            <div class="col-md-6 ">
+                <input id="serachname"class="form-control bg-transparent " type="text" placeholder="Search By Name" autocomplete="off">
+            </div>
+
+            <div class="col-md-6">
+                <input id="searchletter" maxlength="1" class="form-control bg-transparent " type="text" placeholder="Search By First Letter" >
+            </div>
+
+        </div>
+    
+    </div>
+
+
+    
+
+    <div class="container mt-5 position-relative min-vh-100 ">
+
+        
+                
+        <div class="inner-loading" style="display: none;">
+        
+        
+            <span class="loader"></span>
+        </div>
+
+
+
+
+        <div class="row g-4 pb-5 " id="food">
+
+
+
+<!-- 
+            <div class="item col-md-3 ">
+
+                <div class="card overflow-hid borde" style="width: 1rem;">
+                    <img src="	https://www.themealdb.com/images/media/meals/g046bb1663960946.jpg" class="card-img-top" alt="...">
+                    
+
+                    <div class="layer">
+
+                    </div>
+                  
+                  </div>
+            </div> -->
+
+
+
+
+
+            
+        </div>
+
+
+
+        <div class="contact min-vh-100 d-none justify-content-center align-items-center" id="contact">
+            
+
+            <div class="container w-75 d-flex flex-column align-items-center  justify-content-center">
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <input id="nameInput" type="text" class="form-control" placeholder="Enter Your Name" >
+                        <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Special characters and numbers not allowed
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="emailInput" type="email" class="form-control " placeholder="Enter Your Email" >
+                        <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Email not valid *exemple@yyy.zzz
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="phoneInput"  type="text" class="form-control " placeholder="Enter Your Phone" >
+                        <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid Phone Number
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="ageInput"  type="number" class="form-control " placeholder="Enter Your Age" >
+                        <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid age
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="passwordInput"  type="password" class="form-control " placeholder="Enter Your Password" >
+                        <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid password *Minimum eight characters, at least one letter and one number:*
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="repasswordInput"  type="password" class="form-control " placeholder="Repassword" fdprocessedid="gyp21">
+                        <div id="repasswordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid repassword 
+                        </div>
+                    </div>
+                </div>
+                <button id="submitBtn" disabled="" class="btn btn-outline-danger px-2 mt-3">Submit</button>
+                           
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
